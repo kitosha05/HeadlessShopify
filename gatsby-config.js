@@ -34,7 +34,7 @@ module.exports = {
         icon: `src/icons/logo.svg`,
         icons: [
           {
-            src: `src/icons/logo.svg`,
+            src: `/src/icons/logo.svg`,
             type: `svg`,
             purpose: "any maskable",
           },
