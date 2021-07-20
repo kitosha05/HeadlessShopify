@@ -52,6 +52,9 @@ function Hero({ collections }) {
       md="8"
       className="offset-md-2 justify-content-center align-items-center"
     >
+      <Row>
+        <h1>Featured Collections</h1>
+      </Row>
       <Row className="mt-4">
         <Col xs="12" md="4">
           {images[0]}

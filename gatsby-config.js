@@ -37,6 +37,13 @@ module.exports = {
             src: `/icons/logo.svg`,
             sizes: `192x192`,
             type: `image/svg`,
+            purpose: "maskable",
+          },
+          {
+            src: `/icons/logo.svg`,
+            sizes: `512x512`,
+            type: `image/svg`,
+            purpose: "maskable",
           },
         ],
       },

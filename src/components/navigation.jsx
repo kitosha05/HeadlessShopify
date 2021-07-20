@@ -17,7 +17,7 @@ export function Navigation() {
       }
     }
   `)
-  console.log(data)
+
   return data.allShopifyCollection.edges.map((collection) => (
     <NavDropdown.Item>
       <Link
