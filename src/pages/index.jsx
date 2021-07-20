@@ -27,7 +27,6 @@ export const query = graphql`
 `
 
 function Hero({ collections }) {
-  console.log(collections)
   const images = collections.map((collection, index) => {
     return (
       <div className={container}>
