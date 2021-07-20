@@ -26,7 +26,22 @@ export const query = graphql`
       limit: 24
     ) {
       nodes {
-        ...ProductCard
+        id
+        handle
+        publishedAt
+        title
+        priceRangeV2 {
+          minVariantPrice {
+            amount
+            currencyCode
+          }
+        }
+        vendor
+        images {
+          altText
+          id
+          gatsbyImageData(aspectRatio: 1, width: 640)
+        }
       }
       pageInfo {
         hasNextPage

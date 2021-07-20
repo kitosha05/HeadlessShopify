@@ -3,7 +3,9 @@
   grid-template-columns: 1fr;
   column-gap: var(--space-3xl);
 }
-
+.navLink {
+  color: black;
+}
 .container {
   padding: var(--size-gutter-raw);
 }

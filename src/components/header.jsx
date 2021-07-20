@@ -5,13 +5,18 @@ import Logo from "../icons/logo"
 import { Navigation } from "./navigation"
 import { CartButton } from "./cart-button"
 import SearchIcon from "../icons/search"
+import Navbar from "react-bootstrap/Navbar"
+import Nav from "react-bootstrap/Nav"
+import NavDropdown from "react-bootstrap/NavDropdown"
 import { Toast } from "./toast"
 import {
-  header,
-  container,
-  logo as logoCss,
+  navLink,
+  leftSideNav,
   searchButton,
-  nav,
+  navbarBrand,
+  rightSide,
+  navbar,
+  logo,
 } from "./header.module.css"
 
 export function Header() {
@@ -24,17 +29,52 @@ export function Header() {
   }, 0)
 
   return (
-    <div className={container}>
-      <header className={header}>
-        <Link to="/" className={logoCss}>
-          <Logo />
+    <Navbar
+      className={navbar}
+      sticky="top"
+      collapseOnSelect
+      bg="dark"
+      variant="dark"
+      expand="lg"
+    >
+      <Navbar.Brand className={navbarBrand}>
+        <Link to="/">
+          {" "}
+          <Logo className={logo} style={{ display: "inline" }} />
+          <span>King Clothing</span>
         </Link>
-        <Navigation className={nav} />
-        <Link to="/search" className={searchButton}>
-          <SearchIcon />
-        </Link>
-        <CartButton quantity={quantity} />
-      </header>
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className={leftSideNav}>
+          <NavDropdown title="Shop" id="collasible-nav-dropdown">
+            <Navigation />
+          </NavDropdown>
+          {/* <Nav.Link className={navLink} to="/blog">
+            Blog
+          </Nav.Link>
+
+          <Nav.Link className={navLink} to="/pages/about-us">
+            About Us
+          </Nav.Link>
+          <Nav.Link className={navLink} to="/pages/contact-us">
+            Contact Us
+          </Nav.Link> */}
+          {/* <Nav.Link href="#features">About</Nav.Link>
+            <Nav.Link href="#pricing">Contact Us</Nav.Link> */}
+        </Nav>
+        <Nav className={rightSide}>
+          <Nav.Link>
+            <Link to="/search" className={searchButton}>
+              <SearchIcon />
+            </Link>
+          </Nav.Link>
+          <Nav.Link>
+            <CartButton quantity={quantity} />
+          </Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+
       <Toast show={loading || didJustAddToCart}>
         {!didJustAddToCart ? (
           "Updating…"
@@ -63,6 +103,6 @@ export function Header() {
           </>
         )}
       </Toast>
-    </div>
+    </Navbar>
   )
 }

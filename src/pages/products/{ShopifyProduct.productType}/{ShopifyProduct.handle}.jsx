@@ -27,6 +27,7 @@ import {
   addToCartStyle,
   metaSection,
   productDescription,
+  navLink,
 } from "./product-page.module.css"
 
 export default function Product({ data: { product, suggestions } }) {
@@ -153,7 +154,9 @@ export default function Product({ data: { product, suggestions } }) {
           )}
           <div>
             <div className={breadcrumb}>
-              <Link to={product.productTypeSlug}>{product.productType}</Link>
+              <Link className={navLink} to={product.productTypeSlug}>
+                {product.productType}
+              </Link>
               <ChevronIcon size={12} />
             </div>
             <h1 className={header}>{title}</h1>
@@ -215,7 +218,7 @@ export default function Product({ data: { product, suggestions } }) {
 }
 
 export const query = graphql`
-  query($id: String!, $productType: String!) {
+  query ($id: String!, $productType: String!) {
     product: shopifyProduct(id: { eq: $id }) {
       title
       description

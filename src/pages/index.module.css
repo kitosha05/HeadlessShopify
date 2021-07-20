@@ -1,40 +1,35 @@
+.collectionImage {
+  margin: 0 auto;
+}
+.collectionImage:hover {
+  transform: scale(1.1);
+
+  cursor: pointer;
+}
+.overlay {
+  position: absolute;
+  height: 50px;
+  padding: 0 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  background-color: white;
+  opacity: 0.7;
+}
+.overlay:hover {
+  opacity: 0.9;
+}
 .container {
-  padding-left: var(--size-gutter-raw);
-  padding-right: var(--size-gutter-raw);
-  padding-top: var(--space-lg);
-  padding-bottom: var(--space-3xl);
-  max-width: 76ch;
+  position: relative;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.container:hover {
+  transform: scale(1.05);
 
-.intro {
-  padding-bottom: var(--space-lg);
-  line-height: var(--dense);
-  font-size: var(--text-display);
-  color: var(--text-color-secondary);
-}
-
-.callOut {
-  padding-bottom: var(--space-lg);
-  font-size: var(--text-display);
-  font-weight: var(--bold);
-  line-height: var(--dense);
-  line-height: var(--dense);
-  letter-spacing: var(--tight);
-  color: var(--text-color-secondary);
-}
-
-.callOut > strong {
-  text-decoration: underline;
-}
-
-.callToAction {
-  font-size: var(--text-prose);
-  line-height: var(--dense);
-  line-height: var(--dense);
-  letter-spacing: var(--tight);
-  color: var(--text-color-secondary);
-}
-
-.deployButton {
-  margin-top: var(--space-lg);
+  cursor: pointer;
 }

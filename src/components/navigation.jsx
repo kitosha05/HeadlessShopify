@@ -2,38 +2,32 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import * as React from "react"
 import slugify from "@sindresorhus/slugify"
 import { navStyle, navLink, activeLink } from "./navigation.module.css"
-
-export function Navigation({ className }) {
-  const {
-    allShopifyProduct: { productTypes },
-  } = useStaticQuery(graphql`
+import NavDropdown from "react-bootstrap/NavDropdown"
+export function Navigation() {
+  const data = useStaticQuery(graphql`
     query {
-      allShopifyProduct {
-        productTypes: distinct(field: productType)
+      allShopifyCollection(filter: { handle: { nin: "frontpage" } }) {
+        edges {
+          node {
+            title
+            id
+            handle
+          }
+        }
       }
     }
   `)
-
-  return (
-    <nav className={[navStyle, className].join(" ")}>
+  console.log(data)
+  return data.allShopifyCollection.edges.map((collection) => (
+    <NavDropdown.Item>
       <Link
-        key="All"
+        key={collection.node.id}
         className={navLink}
-        to="/products/"
+        to={`/${collection.node.handle}`}
         activeClassName={activeLink}
       >
-        All products
+        {collection.node.title}
       </Link>
-      {productTypes.map((name) => (
-        <Link
-          key={name}
-          className={navLink}
-          to={`/products/${slugify(name)}`}
-          activeClassName={activeLink}
-        >
-          {name}
-        </Link>
-      ))}
-    </nav>
-  )
+    </NavDropdown.Item>
+  ))
 }

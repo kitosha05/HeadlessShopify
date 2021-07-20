@@ -3,18 +3,40 @@ import * as React from "react"
 function Logo(props) {
   return (
     <svg
-      width={24}
-      height={24}
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+      width="50px"
+      height="39px"
+      viewBox="0 0 50 39"
+      version="1.1"
       {...props}
     >
-      <title>Logo</title>
-      <path
-        d="M13 23.959C19.16 23.45 24 18.29 24 12c0-6.627-5.373-12-12-12S0 5.373 0 12c0 6.29 4.84 11.45 11 11.959v-8.56S10.8 12 8 12c0 0 1.5.8 1.9 3.7C4.2 16.9 4 9.1 4 9.1s6.1-.9 7.3 3C12.1 6 21 7 21 7s0 9.6-7 8.9c0-2 2-5 2-5-3 1-3 4.9-3 4.9v8.16zM12.041 24h-.082.082z"
-        fill="currentColor"
-      />
+      <title>Group</title>
+      <desc>Created with Sketch.</desc>
+      <g
+        id="WiP"
+        stroke="none"
+        stroke-width="1"
+        fill="none"
+        fill-rule="evenodd"
+      >
+        <g id="Artboard" transform="translate(-90.000000, -38.000000)">
+          <g id="Group" transform="translate(90.000000, 38.000000)">
+            <polygon
+              id="Rectangle"
+              fill="#808282"
+              points="3 14 25 26.5 47 14 40.855176 39 9.08421785 39"
+            ></polygon>
+            <polygon
+              id="Triangle"
+              fill-opacity="0.262838724"
+              fill="#101A1A"
+              points="25 8 40 39 10 39"
+            ></polygon>
+            <circle id="Oval" fill="#5E6363" cx="2" cy="9" r="2"></circle>
+            <circle id="Oval" fill="#5E6363" cx="25" cy="2" r="2"></circle>
+            <circle id="Oval" fill="#5E6363" cx="48" cy="9" r="2"></circle>
+          </g>
+        </g>
+      </g>
     </svg>
   )
 }

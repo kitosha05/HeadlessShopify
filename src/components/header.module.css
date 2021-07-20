@@ -1,66 +1,65 @@
-.container {
-  display: flex;
-  align-items: center;
-  position: sticky;
-  z-index: 1;
-  top: 0;
-}
-
-.header {
-  display: grid;
+.navbar {
   width: 100%;
-  padding: var(--size-gap) var(--size-gutter);
-  grid-template-columns: var(--size-input) 1fr min-content min-content;
-  grid-template-areas: "logo nada searchButton cartButton" "navHeader navHeader navHeader navHeader";
+  transition: background-color 0.5s ease;
   align-items: center;
-  background-color: var(--background);
-}
-
-.header::after {
-  grid-area: navHeader;
-  content: "";
-  display: block;
-  width: var(--space-2xl);
-  z-index: 1;
-  align-self: stretch;
-  background-image: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 1)
-  );
-  justify-self: flex-end;
-}
-
-@media (min-width: 640px) {
-  .header {
-    grid-template-areas: "logo navHeader searchButton cartButton";
-  }
+  justify-content: center;
+  background: repeating-linear-gradient(60deg, #000 0px, #222 2px, #000 4px);
 }
 
 .logo {
-  display: flex;
-  grid-area: logo;
-  height: 100%;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-color-secondary);
+  display: inline;
+  margin-right: 5px;
 }
 
-.logo:hover {
-  color: var(--text-color);
+.dropdown-menu.show {
+  text-align: center;
+}
+.leftSideNav {
+  margin-right: auto;
+}
+/* .leftSideNav a.nav-link {
+  text-align: center;
+} */
+.leftSideNav #collasible-nav-dropdown {
+  color: white;
+}
+.leftSideNav.navbar-nav > div > div > a {
+  color: white;
+}
+.navLink {
+  color: white;
+}
+
+button.responsive-navbar-nav span {
+  color: white;
+}
+
+/* .nav-item a.nav-link {
+  color: white;
+} */
+
+.navbarBrand {
+  align-items: center;
+  justify-content: center;
+  width: auto;
+}
+
+.navbarBrand a {
+  color: white;
   text-decoration: none;
 }
 
-.logo[aria-current="page"] {
-  color: var(--primary);
+.rightSide {
+  align-items: center;
+  justify-content: space-between;
 }
 
-.nav {
-  grid-area: navHeader;
-  align-self: stretch;
+a.profile-link {
+  color: white;
 }
-
+.cart-icon {
+  color: white;
+}
 .searchButton {
   color: var(--text-color-secondary);
   grid-area: searchButton;
@@ -68,12 +67,4 @@
   height: var(--size-input);
   display: grid;
   place-items: center;
-}
-
-.searchButton:hover {
-  color: var(--text-color);
-}
-
-.searchButton[aria-current="page"] {
-  color: var(--primary);
 }
