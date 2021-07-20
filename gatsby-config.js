@@ -25,13 +25,20 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `GatsbyJS`,
-        short_name: `GatsbyJS`,
+        name: `King Clothing`,
+        short_name: `KingClothing`,
         start_url: `/`,
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
         icon: `src/icons/logo.svg`,
+        icons: [
+          {
+            src: `/icons/logo.svg`,
+            sizes: `192x192`,
+            type: `image/svg`,
+          },
+        ],
       },
     },
     `gatsby-plugin-offline`,
