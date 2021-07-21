@@ -1,6 +1,8 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import { Layout } from "../components/layout"
+import HeroImage from "../components/hero-image"
+import AnimatedText from "../components/animated-text"
 import { navigate } from "@reach/router"
 import { ProductListing } from "../components/product-listing"
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -52,9 +54,6 @@ function Hero({ collections }) {
       md="8"
       className="offset-md-2 justify-content-center align-items-center"
     >
-      <Row>
-        <h1>Featured Collections</h1>
-      </Row>
       <Row className="mt-4">
         <Col xs="12" md="4">
           {images[0]}
@@ -83,7 +82,10 @@ export default function IndexPage({ data }) {
 
   return (
     <Layout>
+      <HeroImage />
+      <AnimatedText />
       <Hero collections={collectionNodes} />
+
       {/* <ProductListing products={data?.shopifyCollection?.products} /> */}
     </Layout>
   )

@@ -40,7 +40,7 @@ module.exports = {
             purpose: "maskable",
           },
           {
-            src: `/icons/logo.svg`,
+            src: `/icons/logo512.svg`,
             sizes: `512x512`,
             type: `image/svg`,
             purpose: "maskable",
