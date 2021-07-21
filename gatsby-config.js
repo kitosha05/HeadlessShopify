@@ -32,20 +32,20 @@ module.exports = {
         theme_color: `#a2466c`,
         display: `standalone`,
         icon: `src/icons/logo512.svg`,
-        icons: [
-          {
-            src: `/icons/logo.svg`,
-            sizes: `192x192`,
-            type: `image/svg`,
-            purpose: "any maskable",
-          },
-          {
-            src: `/icons/logo512.svg`,
-            sizes: `512x512`,
-            type: `image/svg`,
-            purpose: "any maskable",
-          },
-        ],
+        // icons: [
+        //   {
+        //     src: `/icons/logo.svg`,
+        //     sizes: `192x192`,
+        //     type: `image/svg`,
+        //     purpose: "any maskable",
+        //   },
+        //   {
+        //     src: `/icons/logo512.svg`,
+        //     sizes: `512x512`,
+        //     type: `image/svg`,
+        //     purpose: "any maskable",
+        //   },
+        // ],
       },
     },
     `gatsby-plugin-offline`,
