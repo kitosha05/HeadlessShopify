@@ -31,19 +31,19 @@ module.exports = {
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
-        icon: `src/icons/logo.svg`,
+        icon: `src/icons/logo512.svg`,
         icons: [
           {
             src: `/icons/logo.svg`,
             sizes: `192x192`,
             type: `image/svg`,
-            purpose: "maskable",
+            purpose: "any maskable",
           },
           {
             src: `/icons/logo512.svg`,
             sizes: `512x512`,
             type: `image/svg`,
-            purpose: "maskable",
+            purpose: "any maskable",
           },
         ],
       },

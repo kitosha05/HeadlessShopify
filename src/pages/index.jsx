@@ -82,10 +82,10 @@ export default function IndexPage({ data }) {
 
   return (
     <Layout>
-      <HeroImage />
-      <AnimatedText />
-      <Hero collections={collectionNodes} />
+      {/* <HeroImage /> */}
 
+      <Hero collections={collectionNodes} />
+      <AnimatedText />
       {/* <ProductListing products={data?.shopifyCollection?.products} /> */}
     </Layout>
   )
